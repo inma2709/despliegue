@@ -1,0 +1,569 @@
+:root {
+  /* 🎨 PALETA BASE */
+  --color-bg: #f8fafc; 
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f9; 
+  --color-border: #e2e8f0; 
+
+  --color-text: #1e293b; 
+  --color-text-muted: #64748b;
+
+  /* 💎 PRIMARIO (Cían Tecnológico/Teal) */
+  --color-primary: #06b6d4; 
+  --color-primary-soft: #22d3ee; 
+  --color-primary-dark: #0e7490; /* Cían más oscuro, ideal para h3 y subtítulos */
+
+  /* ☀️ SECUNDARIO/ACENTO */
+  --color-accent: #facc15; 
+
+  /* 🧭 SIDEBAR (Oscuro y Sofisticado) */
+  --color-sidebar-bg: #0f172a; 
+  --color-sidebar-active-bg: #1e293b; 
+  --color-sidebar-hover-bg: #334155;
+  --color-sidebar-text: #f1f5f9;
+
+  /* 📦 ELEMENTOS */
+  --color-card-bg: #ffffff;
+  --color-card-border: #e2e8f0;
+
+  /* ✅ CAJAS DIDÁCTICAS */
+  --color-activity-bg: #f0fdf4; 
+  --color-activity-border: #4ade80;
+  --color-activity-text: #16a34a;
+
+  --color-practice-bg: #eff6ff; 
+  --color-practice-border: #3b82f6;
+  --color-practice-text: #1d4ed8;
+
+  --color-warning-bg: #fffbeb; 
+  --color-warning-border: #fbbf24; 
+  --color-warning-text: #b45309;
+
+  /* 💻 CÓDIGO & FOOTER DARK BACKGROUND */
+  --color-code-bg: #1f2937; /* Usaremos este color en el footer */
+  --color-code-border: #374151;
+  --color-code-text: #cbd5e1; /* Usaremos este color en el texto del footer */
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem; 
+  line-height: 1.1;
+  margin-bottom: 1.5rem; 
+  color: var(--color-primary); 
+  font-weight: 800; 
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-primary-soft); 
+  border-bottom: 2px solid var(--color-border); 
+  padding-bottom: 0.5rem;
+}
+
+/* --- CORRECCIÓN H3: Color con impacto Cían Oscuro --- */
+h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--color-primary-dark); /* CAMBIO: Uso de Cían Oscuro para más peso didáctico */
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0; 
+  width: 280px; 
+  height: 100vh; 
+  background-color: var(--color-sidebar-bg);
+  border-right: 1px solid var(--color-code-border); 
+  overflow-y: auto;
+  padding: 1.5rem 0; 
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05); 
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0; 
+}
+
+.sidebar li {
+  margin-bottom: 0.1rem;
+}
+
+.sidebar a {
+  display: flex; 
+  align-items: center;
+  color: var(--color-sidebar-text);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s, color 0.2s, border-left 0.2s;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.sidebar a:hover {
+  background-color: var(--color-sidebar-hover-bg);
+  color: white;
+  border-left: 4px solid var(--color-primary-soft); 
+  padding-left: calc(1.5rem - 4px); 
+}
+
+.sidebar a.active {
+  background-color: var(--color-sidebar-active-bg);
+  color: white;
+  font-weight: 600;
+  border-left: 4px solid var(--color-primary); 
+  padding-left: calc(1.5rem - 4px);
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.content-with-sidebar {
+  margin-left: 300px; 
+  padding: 2rem 3rem; 
+  max-width: 900px; 
+}
+
+/* --- TARJETAS DE CAPÍTULO --- */
+.chapter-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.chapter-card:hover {
+  transform: translateY(-4px); 
+  box-shadow: 0 15px 30px rgba(6, 182, 212, 0.15); 
+  border-color: var(--color-primary-soft);
+}
+
+.chapter-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.chapter-number {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-soft)); 
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- BOTONES (Cían Vibrante) --- */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary)); 
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(6, 182, 212, 0.3); 
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.5); 
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  background: var(--color-text-muted);
+  color: white;
+  box-shadow: 0 6px 15px rgba(35, 56, 139, 0.15);
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- CAJAS DIDÁCTICAS --- */
+.activity-box,
+.practice-box,
+.warning-box {
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 8px; 
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+.activity-box {
+  background-color: var(--color-activity-bg);
+  border: 1px solid var(--color-activity-border);
+  border-left: 8px solid var(--color-activity-border); 
+  color: var(--color-activity-text);
+}
+
+.practice-box {
+  background-color: var(--color-practice-bg);
+  border: 1px solid var(--color-practice-border);
+  border-left: 8px solid var(--color-practice-border);
+  color: var(--color-practice-text);
+}
+
+.warning-box {
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-left: 8px solid var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+.warning-box strong {
+  color: #b45309; 
+}
+
+
+/* --- CÓDIGO --- */
+.code-block {
+  background-color: var(--color-code-bg);
+  border: 1px solid var(--color-code-border);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+
+  
+  white-space: pre;
+}
+
+.code-block code {
+  color: var(--color-code-text);
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95rem;
+
+  
+  display: block;
+  white-space: pre;
+}
+
+
+/* --- FOOTER CORREGIDO: Mayor Contraste y Mejor Color --- */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 2px dashed var(--color-border); 
+}
+
+.footer {
+  background-color: var(--color-code-bg); /* CAMBIO: Fondo Gris Oscuro diferente al sidebar */
+  border-top: 1px solid var(--color-code-border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--color-code-text); /* CAMBIO: Color Blanco Suave para mejor legibilidad */
+}
+
+ul, ol {
+  padding-left: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-surface-alt);
+  font-weight: 700;
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+dl dt {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+}
+
+dl dd {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+    .content-with-sidebar {
+        margin-left: 280px;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative; 
+    width: 100%;
+    height: auto;
+    border-right: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .sidebar a {
+    padding: 1rem 1.5rem;
+  }
+
+  .content-with-sidebar {
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* --- COMPONENTE DETAILS/SUMMARY (Acordeón Didáctico) --- */
+
+details {
+  /* Separación visual del contenido */
+  margin: 1.5rem 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s;
+}
+
+/* Estilo para el estado abierto */
+details[open] {
+  border-color: var(--color-primary-soft);
+}
+
+/* Estilo del encabezado (summary) */
+summary {
+  /* Color de fondo para diferenciar el encabezado */
+  background-color: var(--color-surface-alt);
+  padding: 1rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text); /* Color del texto principal */
+  
+  /* Icono por defecto: Ajuste del triángulo */
+  list-style: none; /* Elimina el marcador de lista por defecto */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+summary::before {
+  content: '▶'; /* Triángulo de Play */
+  font-size: 0.8em;
+  color: var(--color-primary); /* Color Cían para el icono */
+  margin-right: 1rem;
+  transition: transform 0.2s;
+}
+
+/* Animación del icono al abrir */
+details[open] > summary::before {
+  content: '▼'; /* Triángulo de abajo */
+  transform: rotate(0deg); 
+  color: var(--color-primary-dark);
+}
+
+/* Contenido dentro del details */
+details > :not(summary) {
+  padding: 1rem 1.5rem 1.5rem 1.5rem; /* Relleno uniforme */
+}
+
+/* Estilo específico para los listados dentro del details */
+details ul {
+  padding-left: 1.5rem; /* Menos padding en la lista interna */
+  margin-bottom: 0;
+}
+
+details li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Asegura que el CodeBlock tenga el padding adecuado si está dentro de details */
+details .code-block {
+    margin: 1rem 0;
+}
+
+/* Ajuste específico para el summary que contiene un strong para darle color */
+summary strong {
+    color: var(--color-primary-dark); /* Color más oscuro para el título del acordeón */
+}
+
+/* --- ESTILO PARA LISTAS ORDENADAS (OL) COMO PASOS DE ÍNDICE --- */
+
+/* Restablecer la lista principal para usar nuestro propio marcador */
+ol {
+  list-style: none; /* Elimina el número por defecto */
+  padding-left: 0;
+  margin-left: 0;
+  counter-reset: step-counter; /* Inicializa el contador */
+  margin-bottom: 2rem;
+}
+
+ol li {
+  counter-increment: step-counter; /* Incrementa el contador por cada <li> */
+  padding-left: 2.5rem; /* Deja espacio para el marcador personalizado */
+  margin-bottom: 1.5rem; /* Más espacio entre elementos */
+  position: relative;
+  line-height: 1.7;
+}
+
+ol li::before {
+  /* El círculo del número */
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  
+  /* Estilo visual */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  
+  /* Colores Cían */
+  background: var(--color-primary-dark); /* Color de fondo Cían oscuro */
+  color: white; /* Texto del número en blanco */
+  font-weight: 700;
+  font-size: 0.9rem;
+  
+  /* Borde para profundidad */
+  border: 2px solid var(--color-primary); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste opcional: mejorar el estilo de las strong tags dentro de la lista */
+ol li strong {
+  color: var(--color-primary-dark);
+}
+
+/* --- ENLACES GENERALES DEL CONTENIDO --- */
+
+a {
+  color: var(--color-primary-dark); /* Color Cían oscuro para que se lea bien */
+  text-decoration: none; /* Empezamos sin subrayado */
+  transition: color 0.2s, text-decoration 0.2s;
+  font-weight: 500; /* Ligeramente más grueso que el texto normal */
+}
+
+a:hover {
+  color: var(--color-primary); /* Cían brillante al pasar el ratón */
+  /* Añadir un subrayado sutil, que no sea la línea completa */
+  text-decoration: underline 2px;
+  text-decoration-skip-ink: none; /* Asegura la línea sólida */
+  text-underline-offset: 0.3em; /* Separa el subrayado del texto */
+}
+
+/* Enlaces visitados (opcional, pero ayuda a la navegación didáctica) */
+a:visited {
+  color: var(--color-text-muted); /* Gris oscuro (más discreto) */
+}
+
+a:visited:hover {
+  color: var(--color-primary); /* Vuelve al Cían en hover */
+}
+
+/* estilo pagina de servidores*/
+.web-environments h3 {
+  margin-top: 2rem;
+}
+
+.web-environments ul {
+  margin-left: 1.5rem;
+}
+
+.web-environments h4 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
