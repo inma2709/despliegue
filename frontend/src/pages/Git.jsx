@@ -1202,6 +1202,187 @@ cd aprendiendoGit`}
   </p>
 </details>
 
+{/* =========================================================
+     SECTION · Git desde Visual Studio Code
+========================================================== */}
+<details>
+  <summary>🟦 Section · Gestión de Git desde Visual Studio Code</summary>
+
+  <p>
+    Visual Studio Code incorpora un <strong>control de versiones integrado</strong>
+    que permite trabajar con Git sin necesidad de escribir todos los comandos en la terminal.
+  </p>
+
+  <p>
+    Aunque usemos botones y menús, es importante entender que
+    <strong>VS Code no sustituye a Git</strong>:
+    simplemente ejecuta los comandos Git por nosotros.
+  </p>
+
+  <h3>🧩 Panel de Control de Versiones</h3>
+  <p>
+    En la barra lateral izquierda encontrarás el icono de
+    <strong>Source Control</strong> (normalmente con un símbolo de ramas).
+  </p>
+
+  <p>
+    Desde este panel puedes:
+  </p>
+  <ul>
+    <li>Ver archivos modificados.</li>
+    <li>Preparar cambios para commit (stage).</li>
+    <li>Crear commits.</li>
+    <li>Cambiar de rama.</li>
+    <li>Hacer push, pull y fetch.</li>
+  </ul>
+
+  <h3>🔍 Ver cambios (equivale a <code>git status</code>)</h3>
+  <p>
+    Cuando modificas un archivo, VS Code lo detecta automáticamente
+    y lo muestra en el panel de control de versiones.
+  </p>
+
+  <p>
+    Esto es lo mismo que ejecutar:
+  </p>
+
+  <pre>
+    <code>{`git status`}</code>
+  </pre>
+
+  <p>
+    VS Code incluso te muestra las diferencias línea a línea
+    para que entiendas exactamente qué ha cambiado.
+  </p>
+
+  <h3>➕ Preparar cambios (Stage)</h3>
+  <p>
+    Antes de guardar una versión, debes indicar qué archivos
+    quieres incluir en el commit.
+  </p>
+
+  <p>
+    En VS Code:
+  </p>
+  <ul>
+    <li>Pulsa el botón <strong>+</strong> junto al archivo.</li>
+    <li>O usa <strong>Stage All Changes</strong>.</li>
+  </ul>
+
+  <p>
+    Esto equivale a:
+  </p>
+
+  <pre>
+    <code>{`git add archivo.js
+git add .`}</code>
+  </pre>
+
+  <p>
+    <strong>Importante:</strong> preparar cambios no crea una versión,
+    solo selecciona qué se guardará después.
+  </p>
+
+  <h3>💾 Crear un commit</h3>
+  <p>
+    En la parte superior del panel de Git encontrarás un campo
+    para escribir el mensaje de commit.
+  </p>
+
+  <ol>
+    <li>Escribe un mensaje claro y descriptivo.</li>
+    <li>Pulsa el botón <strong>Commit</strong>.</li>
+  </ol>
+
+  <p>
+    VS Code ejecuta internamente:
+  </p>
+
+  <pre>
+    <code>{`git commit -m "Mensaje del commit"`}</code>
+  </pre>
+
+  <p>
+    En este momento se guarda una <strong>versión real del proyecto</strong>
+    en tu ordenador.
+  </p>
+
+  <h3>🌿 Cambiar y crear ramas</h3>
+  <p>
+    En la esquina inferior izquierda de VS Code puedes ver
+    la rama actual.
+  </p>
+
+  <p>
+    Al hacer clic:
+  </p>
+  <ul>
+    <li>Puedes cambiar de rama.</li>
+    <li>Crear una nueva rama.</li>
+  </ul>
+
+  <p>
+    Crear una rama desde VS Code equivale a:
+  </p>
+
+  <pre>
+    <code>{`git checkout -b feature/nueva-funcionalidad`}</code>
+  </pre>
+
+  <p>
+    Trabajar con ramas desde VS Code es una forma segura
+    de no romper la versión principal del proyecto.
+  </p>
+
+  <h3>🌐 Sincronización con GitHub (push, pull, fetch)</h3>
+  <p>
+    En la parte superior del panel o en la barra inferior,
+    VS Code muestra opciones para sincronizar el repositorio.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Push:</strong> sube tus commits al repositorio remoto.
+    </li>
+    <li>
+      <strong>Pull:</strong> descarga e integra cambios del remoto.
+    </li>
+    <li>
+      <strong>Fetch:</strong> descarga información sin modificar tus archivos.
+    </li>
+  </ul>
+
+  <p>
+    Estos botones corresponden a los comandos:
+  </p>
+
+  <pre>
+    <code>{`git push
+git pull
+git fetch`}</code>
+  </pre>
+
+  <p>
+    VS Code suele avisarte si hay cambios en el remoto antes de hacer pull,
+    ayudando a evitar conflictos.
+  </p>
+
+  <h3>⚠️ Buenas prácticas usando VS Code</h3>
+  <ul>
+    <li>Revisa siempre los archivos antes de hacer commit.</li>
+    <li>No hagas commits automáticos sin leer el mensaje.</li>
+    <li>Comprueba en qué rama estás antes de trabajar.</li>
+    <li>Haz pull antes de empezar a trabajar en equipo.</li>
+  </ul>
+
+  <p>
+    <strong>Conclusión:</strong> Visual Studio Code facilita el uso de Git,
+    pero entender los comandos que hay detrás es lo que te convierte
+    en un desarrollador profesional.
+  </p>
+</details>
+
+
 
       {/* =========================================================
          SECTION 16
