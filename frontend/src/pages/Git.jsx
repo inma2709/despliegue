@@ -1382,6 +1382,123 @@ git fetch`}</code>
   </p>
 </details>
 
+{/* =========================================================
+     SECTION · Historial de commits y botones en GitHub
+========================================================== */}
+<details>
+  <summary>🟦 Section · Historial de commits y botones en GitHub</summary>
+
+  <p>
+    En GitHub, el historial de commits muestra todas las
+    <strong>versiones del proyecto</strong> guardadas hasta el momento.
+    Cada fila representa una versión concreta creada mediante un
+    <code>git commit</code>.
+  </p>
+
+  <p>
+    Esta vista es la versión web de lo que en local veríamos con:
+  </p>
+
+  <pre>
+    <code>{`git log`}</code>
+  </pre>
+
+  <p>
+    En el historial puedes ver:
+  </p>
+  <ul>
+    <li>El mensaje del commit.</li>
+    <li>La persona que lo realizó.</li>
+    <li>La fecha y hora.</li>
+    <li>La rama en la que se encuentra.</li>
+    <li>El identificador único del commit (hash).</li>
+  </ul>
+
+  <h3>🔘 Botones que aparecen junto a cada commit</h3>
+
+  <h4>📋 Copiar identificador del commit</h4>
+  <p>
+    El icono de copiar permite copiar el
+    <strong>identificador del commit</strong> (hash), por ejemplo:
+    <code>2d87a5d</code>.
+  </p>
+
+  <p>
+    Este identificador es el “DNI” de la versión y se utiliza para:
+  </p>
+  <ul>
+    <li>volver a una versión concreta,</li>
+    <li>revertir un commit incorrecto,</li>
+    <li>referirse a una versión exacta del proyecto.</li>
+  </ul>
+
+  <p>
+    Ejemplo de uso:
+  </p>
+
+  <pre>
+    <code>{`git revert 2d87a5d`}</code>
+  </pre>
+
+  <h4>🔍 Botón <code>&lt;&gt;</code> · Ver cambios del commit</h4>
+  <p>
+    Este botón muestra exactamente
+    <strong>qué cambió en esa versión</strong>:
+  </p>
+
+  <ul>
+    <li>líneas añadidas (en verde),</li>
+    <li>líneas eliminadas (en rojo),</li>
+    <li>archivos modificados.</li>
+  </ul>
+
+  <p>
+    Permite responder a preguntas como:
+  </p>
+  <ul>
+    <li>¿Qué hice en esta versión?</li>
+    <li>¿Dónde se introdujo un error?</li>
+    <li>¿Qué cambios hizo cada persona?</li>
+  </ul>
+
+  <h4>📁 Clic en el mensaje del commit</h4>
+  <p>
+    Al hacer clic en el mensaje del commit se accede a la
+    <strong>vista completa de esa versión</strong>, donde se puede ver:
+  </p>
+
+  <ul>
+    <li>el detalle de todos los archivos modificados,</li>
+    <li>el diff completo,</li>
+    <li>el hash largo del commit,</li>
+    <li>opciones para comparar versiones.</li>
+  </ul>
+
+  <h3>🧠 Relación con lo aprendido en Git</h3>
+  <p>
+    Esta sección conecta directamente con conceptos clave del control de versiones:
+  </p>
+
+  <ul>
+    <li>Un commit es una versión real del proyecto.</li>
+    <li>Git no borra versiones, las conserva.</li>
+    <li>Cada versión puede revisarse y recuperarse.</li>
+    <li>El historial forma parte del proyecto.</li>
+  </ul>
+
+  <h3>🎓 Frase clave para manual o evaluación</h3>
+  <p>
+    <strong>
+      GitHub permite consultar el historial de commits del repositorio y revisar cada versión,
+      copiar su identificador y ver los cambios realizados en cada commit.
+    </strong>
+  </p>
+
+  <p>
+    Saber leer este historial es una habilidad fundamental para trabajar
+    en equipo y mantener proyectos estables.
+  </p>
+</details>
 
 
       {/* =========================================================
