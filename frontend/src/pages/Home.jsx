@@ -5,71 +5,95 @@ const Home = () => {
     {
       number: 0,
       title: 'Introducción a la UC0493_3',
-      description: 'Objetivo de la unidad y qué aprenderás en 30 horas.',
+      description: 'Objetivo de la unidad, alcance profesional y estructura del manual.',
       path: '/introduccion'
     },
     {
       number: 1,
       title: 'Entornos Web',
-      description: 'Internet, Intranet y Extranet explicado de forma sencilla.',
+      description: 'Internet, Intranet y Extranet. Contexto de trabajo de una aplicación web.',
       path: '/entornos-web'
     },
     {
       number: 2,
-      title: 'Implementación Web Básica',
-      description: 'Cómo poner en marcha una aplicación en local.',
-      path: '/implementacion'
+      title: 'Arquitectura Web',
+      description: 'Estructura de una aplicación web: frontend, backend, servidor y base de datos.',
+      path: '/arquitectura-web'
     },
     {
       number: 3,
-      title: 'Verificación y Pruebas',
-      description: 'Comprobaciones básicas para validar tu aplicación.',
-      path: '/verificacion'
+      title: 'Despliegue de Aplicaciones',
+      description: 'Puesta en marcha de aplicaciones web en local y despliegues estáticos.',
+      path: '/despliegue'
     },
     {
       number: 4,
-      title: 'Seguridad Web Esencial',
-      description: 'Conceptos mínimos de seguridad para proyectos reales.',
-      path: '/seguridad'
+      title: 'Verificación y Pruebas',
+      description: 'Comprobación del correcto funcionamiento de la aplicación.',
+      path: '/verificacion'
     },
     {
       number: 5,
-      title: 'Documentación del Proyecto',
-      description: 'Guías cortas para documentar: instalación y uso.',
-      path: '/documentacion'
+      title: 'Seguridad Básica',
+      description: 'Medidas esenciales de seguridad en aplicaciones web.',
+      path: '/seguridad'
     },
     {
       number: 6,
+      title: 'Documentación Técnica',
+      description: 'Documentación de instalación, configuración y código (JSDoc).',
+      path: '/documentacion'
+    },
+    {
+      number: 7,
+      title: 'Control de Versiones con Git',
+      description: 'Gestión de versiones, ramas y trabajo seguro en proyectos web.',
+      path: '/git'
+    },
+    {
+      number: 8,
       title: 'Proyecto Final',
-      description: 'Mini proyecto para demostrar todo lo aprendido.',
+      description: 'Proyecto integrador aplicando todo lo aprendido en la unidad.',
       path: '/proyecto-final'
+    },
+    {
+      number: 9,
+      title: 'Despliegue en VPS',
+      description: 'Publicación de la aplicación en un servidor real con subdominio.',
+      path: '/despliegue-vps'
+    },
+    {
+      number: 10,
+      title: 'Anexos',
+      description: 'Material complementario, comandos útiles y referencias.',
+      path: '/anexos'
     }
   ]
 
   return (
     <div className="home">
       <h1>Manual UC0493_3</h1>
-      <h2>Implementación y Verificación de Aplicaciones Web</h2>
-      
+      <h2>Implementación, Verificación y Documentación de Aplicaciones Web</h2>
+
       <p>
-        Bienvenido al manual de la Unidad de Competencia UC0493_3. 
-        A lo largo de este curso aprenderás a preparar, poner en marcha, comprobar
-        y documentar aplicaciones web reales, aplicando procedimientos profesionales
-        pero adaptados a un entorno local con XAMPP. El objetivo es que comprendas 
-        cómo funcionan las aplicaciones web por dentro y seas capaz de implementar 
-        tus propios proyectos con seguridad, estructura y metodología.
+        Este manual desarrolla de forma práctica la Unidad de Competencia UC0493_3.
+        A lo largo del recorrido se trabajan los procedimientos reales que intervienen
+        en la puesta en marcha de una aplicación web: preparación del entorno,
+        despliegue, verificación, seguridad, documentación, control de versiones
+        y publicación en servidor.
       </p>
 
       <div className="warning-box">
-        <h4>⚠️ Nota importante</h4>
+        <h4>Nota sobre el entorno de trabajo</h4>
         <p>
-          Todo el aprendizaje se realiza en un entorno local, simulando 
-          Internet, Intranet y Extranet de manera sencilla.
+          El aprendizaje comienza en entorno local y evoluciona progresivamente
+          hacia entornos más cercanos a producción, manteniendo siempre un enfoque
+          profesional y realista.
         </p>
       </div>
 
-      <h2>Contenido del Manual</h2>
-      
+      <h2>Índice del Manual</h2>
+
       <div style={{ display: 'grid', gap: '1.5rem', marginTop: '2rem' }}>
         {chapters.map((chapter) => (
           <div key={chapter.number} className="chapter-card">
@@ -77,28 +101,13 @@ const Home = () => {
             <h3>{chapter.title}</h3>
             <p>{chapter.description}</p>
             <Link to={chapter.path} className="btn" style={{ marginTop: '1rem' }}>
-              Ir al Capítulo →
+              Ir al capítulo →
             </Link>
           </div>
         ))}
       </div>
 
-      <div className="activity-box" style={{ marginTop: '3rem' }}>
-        <h4>🎯 Objetivo del Manual</h4>
-        <p>
-          Al finalizar este curso serás capaz de implementar, verificar y documentar 
-          una aplicación web básica en un entorno local. Dominarás conceptos clave 
-          como la estructura de una aplicación web, la preparación del entorno, 
-          el despliegue en localhost, la realización de pruebas funcionales, 
-          la aplicación de medidas básicas de seguridad y la creación de 
-          documentación técnica y de usuario. 
-          <br /><br />
-          En resumen, adquirirás una visión completa del proceso profesional 
-          que sigue cualquier proyecto web desde su instalación hasta su entrega final.
-        </p>
-      </div>
-
-      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <div style={{ textAlign: 'center', marginTop: '3rem' }}>
         <Link to="/introduccion" className="btn" style={{ fontSize: '1.2rem', padding: '1rem 2rem' }}>
           Comenzar →
         </Link>

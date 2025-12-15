@@ -14,7 +14,7 @@ import Maintenance from './pages/Maintenance'
 import FinalProject from './pages/FinalProject'
 import VPSDeployment from './pages/VPSDeployment'
 import Annexes from './pages/Annexes'
-
+import  Git from './pages/Git'
 function App() {
   return (
     <div className="App">
@@ -37,6 +37,7 @@ function App() {
             <Route path="/proyecto-final" element={<FinalProject />} />
             <Route path="/despliegue-vps" element={<VPSDeployment />} />
             <Route path="/anexos" element={<Annexes />} />
+            <Route path="/git" element={<Git />} />
           </Routes>
         </main>
       </div>
