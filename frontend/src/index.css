@@ -224,10 +224,27 @@ p {
 }
 
 .btn-secondary {
-  background: var(--color-text-muted);
-  color: white;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-dark),
+    var(--color-primary)
+  );
+
+  color: #ffffff;              /* 🔑 texto blanco */
+  border: 2px solid #06b6d4;  /* 🔑 borde cían */
+  border-radius: 9999px;
+
+  padding: 0.75rem 1.6rem;
+
   box-shadow: 0 6px 15px rgba(35, 56, 139, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  text-decoration: none;       /* 🔑 quita subrayado si es <a> */
+  font-weight: 600;
 }
+
+
 
 .btn-secondary:hover {
   background: #4b5563;

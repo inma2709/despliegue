@@ -306,9 +306,7 @@ const WebEnvironments = () => {
                  <li>Servidor Estático: Sirve HTML, CSS e imágenes más rápido que Apache.</li>
                  <li>Proxy Inverso: Actúa como intermediario seguro delante de aplicaciones de Backend (como Node.js o Python).</li>
              </ul>
-             <p>
-                <strong>📌 Nota importante:</strong> Empresas de hosting moderno como Hostinger usan Nginx como capa principal para maximizar la velocidad y el manejo de tráfico. Por eso, nos centraremos en aprender su configuración en el tema 3.
-             </p>
+           
         </li>
         <li>
            {' '}<strong>Microsoft IIS:</strong> 
