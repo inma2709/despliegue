@@ -9,12 +9,12 @@ import SeccionVPS from '../components/SeccionVPS';
 import SeccionServidorWeb from '../components/SeccionServidorWeb';
 import SeccionSSL from '../components/SeccionSSL';
 import SeccionSubdominios from '../components/SeccionSubdominios';
+import SeccionDocker from '../components/SeccionDocker'; // ✅ NUEVO
 import SeccionDespliegueEstatico from '../components/SeccionDespliegueEstatico';
 import SeccionDespliegueBackend from '../components/SeccionDespliegueBackend';
 import SeccionLocalhost from '../components/SeccionLocalhost';
 import SeccionProyectoFinal from '../components/SeccionProyectoFinal';
 import SeccionCarpetaDist from '../components/SeccionCarpetaDist';
-
 
 const WebDeployment = () => {
   return (
@@ -106,8 +106,8 @@ const WebDeployment = () => {
             <a href="#t3-3">3.3. Dominios, DNS y registros básicos</a>
           </li>
           <li>
-  <a href="#t3-12">3.4. Carpeta dist: compilar y subir a public_html (Hostinger)</a>
-</li>
+            <a href="#t3-12">3.4. Carpeta dist: compilar y subir a public_html (Hostinger)</a>
+          </li>
 
           <li>
             <a href="#t3-4">3.4. ¿Qué es un VPS? Arquitectura real de DevCampus</a>
@@ -121,6 +121,12 @@ const WebDeployment = () => {
           <li>
             <a href="#t3-7">3.7. Subdominios para proyectos de alumnos</a>
           </li>
+
+          {/* ✅ NUEVO: Docker como ampliación profesional */}
+          <li>
+            <a href="#t3-docker">3.7 bis. Docker: entornos reproducibles (ampliación profesional)</a>
+          </li>
+
           <li>
             <a href="#t3-8">3.8. Despliegue de una aplicación estática (HTML/CSS/JS)</a>
           </li>
@@ -150,9 +156,10 @@ const WebDeployment = () => {
       <section id="t3-3">
         <SeccionDNS />
       </section>
-<section id="t3-12">
-  <SeccionCarpetaDist />
-</section>
+
+      <section id="t3-12">
+        <SeccionCarpetaDist />
+      </section>
 
       <section id="t3-4">
         <SeccionVPS />
@@ -168,6 +175,11 @@ const WebDeployment = () => {
 
       <section id="t3-7">
         <SeccionSubdominios />
+      </section>
+
+      {/* ✅ NUEVO: Docker */}
+      <section id="t3-docker">
+        <SeccionDocker />
       </section>
 
       <section id="t3-8">
