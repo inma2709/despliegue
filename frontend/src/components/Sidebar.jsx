@@ -16,7 +16,7 @@ const Sidebar = () => {
     { path: '/despliegue', label: '🚀 Despliegue de Aplicaciones', number: '3' },
     { path: '/verificacion', label: '✅ Verificación y Pruebas', number: '4' },
     { path: '/seguridad', label: '🔐 Seguridad Básica', number: '5' },
-    { path: '/test-seguridad', label: '🧪 Test Seguridad', number: '📝' },
+    { path: '/test-seguridad', label: '📝 Test Final de Repaso', number: '📝' },
     { path: '/documentacion', label: '📚 Documentación Técnica', number: '6' },
 
     // Nuevo capítulo añadido

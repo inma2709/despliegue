@@ -645,7 +645,7 @@ const SecurityTest = () => {
 
   return (
     <div className="security-test">
-      <h1>🔐 Test: Seguridad Básica en Aplicaciones Web</h1>
+      <h1>� Test Final de Repaso</h1>
       
       <div className="test-results">
         <div className="score">Puntuación: {getCorrectCount()}/{shuffledQuestions.length}</div>
