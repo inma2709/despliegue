@@ -105,6 +105,16 @@ const Home = () => {
             </Link>
           </div>
         ))}
+        
+        {/* Tarjeta especial para el test de seguridad */}
+        <div className="chapter-card test-card">
+          <div className="chapter-number test-number">🧪</div>
+          <h3>🔐 Test de Seguridad Web</h3>
+          <p>Pon a prueba tus conocimientos sobre seguridad básica en aplicaciones web con 50 preguntas interactivas y retroalimentación detallada.</p>
+          <Link to="/test-seguridad" className="btn test-btn" style={{ marginTop: '1rem' }}>
+            Hacer Test →
+          </Link>
+        </div>
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '3rem' }}>

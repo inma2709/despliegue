@@ -15,6 +15,7 @@ import FinalProject from './pages/FinalProject'
 import VPSDeployment from './pages/VPSDeployment'
 import Annexes from './pages/Annexes'
 import  Git from './pages/Git'
+import SecurityTest from './pages/SecurityTest'
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,7 @@ function App() {
             <Route path="/despliegue" element={<WebDeployment />} />
             <Route path="/verificacion" element={<Testing />} />
             <Route path="/seguridad" element={<Security />} />
+            <Route path="/test-seguridad" element={<SecurityTest />} />
             <Route path="/documentacion" element={<Documentation />} />
             <Route path="/mantenimiento" element={<Maintenance />} />
             <Route path="/proyecto-final" element={<FinalProject />} />

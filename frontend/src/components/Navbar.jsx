@@ -36,6 +36,9 @@ const Navbar = () => {
               <Link to="/seguridad" className={isActive('/seguridad')}>Seguridad</Link>
             </li>
             <li>
+              <Link to="/test-seguridad" className="test-link">🔐 Test Seguridad</Link>
+            </li>
+            <li>
               <Link to="/documentacion" className={isActive('/documentacion')}>Documentación</Link>
             </li>
             <li>

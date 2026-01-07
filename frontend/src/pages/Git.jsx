@@ -54,6 +54,78 @@ const Git = () => {
       </details>
 
       {/* =========================================================
+         ACTIVIDAD PRÁCTICA DE GIT COLABORATIVO
+      ========================================================== */}
+      <div className="practice-activity-box" style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        border: 'none',
+        borderRadius: '12px',
+        padding: '24px',
+        margin: '20px 0',
+        color: 'white',
+        boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)'
+      }}>
+        <h3 style={{ margin: '0 0 16px 0', fontSize: '1.3em', display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '12px', fontSize: '1.5em' }}>🚀</span>
+          Actividad Práctica: Git Colaborativo en Clase
+        </h3>
+        
+        <p style={{ margin: '12px 0', lineHeight: '1.6' }}>
+          <strong>¡Accede a la actividad que realizamos en clase!</strong> En el siguiente repositorio encontrarás:
+        </p>
+        
+        <ul style={{ margin: '12px 0', paddingLeft: '20px' }}>
+          <li>📝 <strong>README completo y explicativo</strong> con todos los pasos</li>
+          <li>🏗️ <strong>Ejercicio práctico de colaboración</strong> con Git y GitHub</li>
+          <li>🔄 <strong>Flujo de trabajo colaborativo</strong> real entre desarrolladores</li>
+          <li>⚡ <strong>Casos prácticos</strong> de resolución de conflictos</li>
+        </ul>
+
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.15)',
+          borderRadius: '8px',
+          padding: '16px',
+          margin: '16px 0',
+          textAlign: 'center'
+        }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: 'bold' }}>
+            🔗 Repositorio de la actividad:
+          </p>
+          <a 
+            href="https://github.com/inma2709/gitcolaborativo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              color: '#FFD700',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '1.1em',
+              padding: '8px 16px',
+              border: '2px solid #FFD700',
+              borderRadius: '6px',
+              display: 'inline-block',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.background = '#FFD700';
+              e.target.style.color = '#764ba2';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.background = 'transparent';
+              e.target.style.color = '#FFD700';
+            }}
+          >
+            github.com/inma2709/gitcolaborativo
+          </a>
+        </div>
+
+        <p style={{ margin: '12px 0 0 0', fontSize: '0.95em', opacity: '0.9' }}>
+          💡 <strong>Tip:</strong> Este repositorio contiene ejemplos reales de lo que veremos en esta lección. 
+          ¡Consúltalo mientras estudias para ver los conceptos en acción!
+        </p>
+      </div>
+
+      {/* =========================================================
          SECTION 1
       ========================================================== */}
       <details>
@@ -1614,6 +1686,198 @@ git fetch`}</code>
     vuelve a esta guía y repite los pasos con un proyecto pequeño.
   </p>
 </details>
+
+      {/* =========================================================
+         CHULETA DE COMANDOS GIT Y GIT DESKTOP
+      ========================================================== */}
+      <div className="git-cheatsheet" style={{
+        background: 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)',
+        border: '2px solid #3498db',
+        borderRadius: '15px',
+        padding: '30px',
+        margin: '30px 0',
+        color: '#ecf0f1',
+        boxShadow: '0 10px 30px rgba(52, 152, 219, 0.3)'
+      }}>
+        <h3 style={{ 
+          margin: '0 0 24px 0', 
+          fontSize: '1.5em', 
+          textAlign: 'center',
+          color: '#3498db',
+          borderBottom: '2px solid #3498db',
+          paddingBottom: '12px'
+        }}>
+          🚀 Chuleta de Comandos Git + Git Desktop
+        </h3>
+        
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+          gap: '24px',
+          marginBottom: '30px'
+        }}>
+          <div style={{
+            background: 'rgba(52, 152, 219, 0.1)',
+            borderRadius: '8px',
+            padding: '20px',
+            border: '1px solid #3498db'
+          }}>
+            <h4 style={{ color: '#3498db', marginBottom: '12px' }}>📋 Comandos Básicos</h4>
+            <div style={{ fontFamily: 'monospace', fontSize: '0.9em', lineHeight: '1.6' }}>
+              <div><strong>git init</strong> - Inicializar repositorio</div>
+              <div><strong>git status</strong> - Ver estado actual</div>
+              <div><strong>git add .</strong> - Preparar todos los cambios</div>
+              <div><strong>git commit -m "mensaje"</strong> - Guardar versión</div>
+              <div><strong>git log --oneline</strong> - Ver historial</div>
+            </div>
+          </div>
+
+          <div style={{
+            background: 'rgba(46, 204, 113, 0.1)',
+            borderRadius: '8px',
+            padding: '20px',
+            border: '1px solid #2ecc71'
+          }}>
+            <h4 style={{ color: '#2ecc71', marginBottom: '12px' }}>🌿 Gestión de Ramas</h4>
+            <div style={{ fontFamily: 'monospace', fontSize: '0.9em', lineHeight: '1.6' }}>
+              <div><strong>git branch</strong> - Ver ramas locales</div>
+              <div><strong>git checkout -b feature/nombre</strong> - Crear rama</div>
+              <div><strong>git checkout main</strong> - Cambiar a main</div>
+              <div><strong>git merge feature/nombre</strong> - Fusionar rama</div>
+              <div><strong>git branch -d nombre</strong> - Borrar rama</div>
+            </div>
+          </div>
+
+          <div style={{
+            background: 'rgba(155, 89, 182, 0.1)',
+            borderRadius: '8px',
+            padding: '20px',
+            border: '1px solid #9b59b6'
+          }}>
+            <h4 style={{ color: '#9b59b6', marginBottom: '12px' }}>🌐 Trabajo Remoto</h4>
+            <div style={{ fontFamily: 'monospace', fontSize: '0.9em', lineHeight: '1.6' }}>
+              <div><strong>git clone url</strong> - Clonar repositorio</div>
+              <div><strong>git remote -v</strong> - Ver remotos</div>
+              <div><strong>git push -u origin main</strong> - Subir primera vez</div>
+              <div><strong>git pull</strong> - Descargar e integrar</div>
+              <div><strong>git fetch</strong> - Solo descargar info</div>
+            </div>
+          </div>
+
+          <div style={{
+            background: 'rgba(230, 126, 34, 0.1)',
+            borderRadius: '8px',
+            padding: '20px',
+            border: '1px solid #e67e22'
+          }}>
+            <h4 style={{ color: '#e67e22', marginBottom: '12px' }}>⚡ Comandos Útiles</h4>
+            <div style={{ fontFamily: 'monospace', fontSize: '0.9em', lineHeight: '1.6' }}>
+              <div><strong>git diff</strong> - Ver diferencias</div>
+              <div><strong>git stash</strong> - Guardar temporalmente</div>
+              <div><strong>git reset --soft HEAD~1</strong> - Deshacer último commit</div>
+              <div><strong>git log --graph --all</strong> - Ver historial visual</div>
+              <div><strong>git config --global user.name</strong> - Config usuario</div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{
+          background: 'linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%)',
+          borderRadius: '12px',
+          padding: '24px',
+          marginTop: '20px'
+        }}>
+          <h4 style={{ 
+            color: '#ecf0f1', 
+            marginBottom: '16px', 
+            display: 'flex', 
+            alignItems: 'center' 
+          }}>
+            <span style={{ marginRight: '12px', fontSize: '1.3em' }}>🖥️</span>
+            Git Desktop: La Forma Fácil de Usar Git
+          </h4>
+          
+          <p style={{ marginBottom: '16px', lineHeight: '1.6' }}>
+            Si los comandos de terminal te resultan complicados, <strong>GitHub Desktop</strong> es una aplicación 
+            visual gratuita que hace Git mucho más fácil de usar.
+          </p>
+
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+            gap: '16px',
+            marginBottom: '20px'
+          }}>
+            <div>
+              <strong style={{ color: '#3498db' }}>✅ Ventajas:</strong>
+              <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
+                <li>Interfaz visual intuitiva</li>
+                <li>Ver cambios lado a lado</li>
+                <li>Gestión de ramas con clics</li>
+                <li>Resolución de conflictos visual</li>
+                <li>Historial gráfico claro</li>
+              </ul>
+            </div>
+            
+            <div>
+              <strong style={{ color: '#e74c3c' }}>⚠️ Limitaciones:</strong>
+              <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
+                <li>No todos los comandos Git</li>
+                <li>Menos control granular</li>
+                <li>Dependencia de interfaz gráfica</li>
+                <li>Algunos workflows avanzados requieren terminal</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '8px',
+            padding: '16px',
+            textAlign: 'center'
+          }}>
+            <p style={{ margin: '0 0 12px 0', fontWeight: 'bold' }}>
+              🔗 Descarga GitHub Desktop:
+            </p>
+            <a 
+              href="https://desktop.github.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                color: '#FFD700',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                fontSize: '1.1em',
+                padding: '10px 20px',
+                border: '2px solid #FFD700',
+                borderRadius: '6px',
+                display: 'inline-block',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.background = '#FFD700';
+                e.target.style.color = '#8e44ad';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.background = 'transparent';
+                e.target.style.color = '#FFD700';
+              }}
+            >
+              desktop.github.com
+            </a>
+          </div>
+
+          <p style={{ 
+            margin: '16px 0 0 0', 
+            fontSize: '0.95em', 
+            textAlign: 'center',
+            fontStyle: 'italic'
+          }}>
+            💡 <strong>Recomendación:</strong> Aprende primero los comandos básicos, después usa Git Desktop para ser más productivo. 
+            La combinación de ambos te convierte en un desarrollador completo.
+          </p>
+        </div>
+      </div>
 
 
       {/* =========================================================
